@@ -98,4 +98,11 @@ void SymmetricTree::TestSuite()
 	ret = isSymmetric(root);
 	assert(ret == false);
 	cout << ret << endl;
+
+	cout << "test case 7" << endl;
+	nodes = {{1, 1}, {2, 2}, {3, 2}, {4, 4}, {7, 4}, {8, 8}, {15, 8}, {16, 16}, {31, 16}};
+	root = GenBinaryTreeFromMap(nodes);
+	ret = isSymmetric(root);
+	assert(ret == true);
+	cout << ret << endl;
 }
