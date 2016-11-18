@@ -7,6 +7,7 @@
 
 #include "Solution101_150.h"
 #include "SymmetricTree.h"
+#include "BinaryTreeLevelOrderTraversal.h"
 
 //class SymmetricTree;
 
@@ -27,6 +28,7 @@ void Solution101_150::RunLastTestSuite() {
 
 void Solution101_150::InitSolutions() {
 	SolutionSet.push_back(new SymmetricTree());
+	SolutionSet.push_back(new BinaryTreeLevelOrderTraversal());
 }
 
 void Solution101_150::DeleteSolutions() {
