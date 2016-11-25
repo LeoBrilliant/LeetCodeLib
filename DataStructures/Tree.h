@@ -23,4 +23,9 @@ void InOrderTraversal(TreeNode * root);
 void PreOrderTraversal(TreeNode * root);
 void PostOrderTraversal(TreeNode * root);
 void BreadthTraversal(TreeNode * root);
+
+void InOrderTraversal(TreeNode * root, vector<int> & buf);
+void PreOrderTraversal(TreeNode * root, vector<int> & buf);
+void PostOrderTraversal(TreeNode * root, vector<int> & buf);
+void BreadthTraversal(TreeNode * root, vector<int> & buf);
 #endif /* TREE_H_ */

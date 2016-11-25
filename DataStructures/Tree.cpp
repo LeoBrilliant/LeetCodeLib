@@ -130,3 +130,57 @@ void BreadthTraversal(TreeNode* root) {
 
 	DumpVector(value);
 }
+
+void InOrderTraversal(TreeNode* root, vector<int>& buf) {
+	if(!root)
+		return;
+
+	if(root->left)
+		InOrderTraversal(root->left, buf);
+	buf.push_back(root->val);
+	if(root->right)
+		InOrderTraversal(root->right, buf);
+}
+
+void PreOrderTraversal(TreeNode* root, vector<int>& buf) {
+	if(!root)
+		return;
+
+	buf.push_back(root->val);
+	if(root->left)
+		PreOrderTraversal(root->left, buf);
+	if(root->right)
+		PreOrderTraversal(root->right, buf);
+}
+
+void PostOrderTraversal(TreeNode* root, vector<int>& buf) {
+	if(!root)
+		return;
+
+	if(root->left)
+		PostOrderTraversal(root->left, buf);
+	if(root->right)
+		PostOrderTraversal(root->right, buf);
+	buf.push_back(root->val);
+}
+
+void BreadthTraversal(TreeNode* root, vector<int>& buf) {
+	if(!root)
+		return;
+
+	list<TreeNode *> buffer;
+
+	buffer.push_back(root);
+
+	while(!buffer.empty())
+	{
+		TreeNode * curr = buffer.front();
+		if(curr->left)
+			buffer.push_back(curr->left);
+		if(curr->right)
+			buffer.push_back(curr->right);
+
+		buf.push_back(curr->val);
+		buffer.pop_front();
+	}
+}

@@ -9,6 +9,12 @@
 #include "SymmetricTree.h"
 #include "BinaryTreeLevelOrderTraversal.h"
 #include "BucketSort.h"
+#include "BinaryTreeZigzagLevelOrderTraversal.h"
+#include "MaximumDepthOfBinaryTree.h"
+#include "ConstructBinaryTreeFromPreorderAndInorderTraversal.h"
+#include "ConstructBinaryTreeFromInorderAndPostorderTraversal.h"
+#include "BinaryTreeLevelOrderTraversalII.h"
+#include "MinStack.h"
 
 //class SymmetricTree;
 
@@ -31,6 +37,12 @@ void Solution101_150::InitSolutions() {
 	SolutionSet.push_back(new SymmetricTree());
 	SolutionSet.push_back(new BinaryTreeLevelOrderTraversal());
 	SolutionSet.push_back(new BucketSort());
+	SolutionSet.push_back(new BinaryTreeZigzagLevelOrderTraversal());
+	SolutionSet.push_back(new MaximumDepthOfBinaryTree());
+	SolutionSet.push_back(new ConstructBinaryTreeFromPreorderAndInorderTraversal());
+	SolutionSet.push_back(new ConstructBinaryTreeFromInorderAndPostorderTraversal());
+	SolutionSet.push_back(new BinaryTreeLevelOrderTraversalII());
+	SolutionSet.push_back(new MinStack());
 }
 
 void Solution101_150::DeleteSolutions() {
