@@ -59,3 +59,24 @@ void DumpListNode(ListNode * head, ListNode * tail)
 	}
 	cout << "^]" << endl;
 }
+
+ListNode* GetLastNode(ListNode* head) {
+	ListNode * last = head;
+
+	while(last && last->next)
+	{
+		last = last->next;
+	}
+
+	return last;
+}
+
+int GetListLen(ListNode* head) {
+	int len = 0;
+	while(head)
+	{
+		len++;
+		head = head->next;
+	}
+	return len;
+}

@@ -22,5 +22,8 @@ void DumpListNode(ListNode * head);
 
 void DumpListNode(ListNode * head, ListNode * tail);
 
+ListNode * GetLastNode(ListNode * head);
+
+int GetListLen(ListNode * head);
 
 #endif /* DATASTRUCTURES_LIST_H_ */

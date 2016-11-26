@@ -15,6 +15,7 @@
 #include "ConstructBinaryTreeFromInorderAndPostorderTraversal.h"
 #include "BinaryTreeLevelOrderTraversalII.h"
 #include "MinStack.h"
+#include "IntersectionOfTwoLinkedLists.h"
 
 //class SymmetricTree;
 
@@ -43,6 +44,7 @@ void Solution101_150::InitSolutions() {
 	SolutionSet.push_back(new ConstructBinaryTreeFromInorderAndPostorderTraversal());
 	SolutionSet.push_back(new BinaryTreeLevelOrderTraversalII());
 	SolutionSet.push_back(new MinStack());
+	SolutionSet.push_back(new IntersectionOfTwoLinkedLists());
 }
 
 void Solution101_150::DeleteSolutions() {
