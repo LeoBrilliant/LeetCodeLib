@@ -16,6 +16,9 @@
 #include "BinaryTreeLevelOrderTraversalII.h"
 #include "MinStack.h"
 #include "IntersectionOfTwoLinkedLists.h"
+#include "MinimumDepthOfBinaryTree.h"
+#include "BalancedBinaryTree.h"
+#include "EvaluateReversePolishNotation.h"
 
 //class SymmetricTree;
 
@@ -45,6 +48,9 @@ void Solution101_150::InitSolutions() {
 	SolutionSet.push_back(new BinaryTreeLevelOrderTraversalII());
 	SolutionSet.push_back(new MinStack());
 	SolutionSet.push_back(new IntersectionOfTwoLinkedLists());
+	SolutionSet.push_back(new MinimumDepthOfBinaryTree());
+	SolutionSet.push_back(new BalancedBinaryTree());
+	SolutionSet.push_back(new EvaluateReversePolishNotation());
 }
 
 void Solution101_150::DeleteSolutions() {
