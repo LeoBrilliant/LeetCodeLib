@@ -19,6 +19,8 @@
 #include "MinimumDepthOfBinaryTree.h"
 #include "BalancedBinaryTree.h"
 #include "EvaluateReversePolishNotation.h"
+#include "ConvertSortedArrayToBinarySearchTree.h"
+#include "ConvertSortedListToBinarySearchTree.h"
 
 //class SymmetricTree;
 
@@ -51,6 +53,8 @@ void Solution101_150::InitSolutions() {
 	SolutionSet.push_back(new MinimumDepthOfBinaryTree());
 	SolutionSet.push_back(new BalancedBinaryTree());
 	SolutionSet.push_back(new EvaluateReversePolishNotation());
+	SolutionSet.push_back(new ConvertSortedArrayToBinarySearchTree());
+	SolutionSet.push_back(new ConvertSortedListToBinarySearchTree());
 }
 
 void Solution101_150::DeleteSolutions() {

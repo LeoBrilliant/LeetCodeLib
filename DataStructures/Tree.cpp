@@ -184,3 +184,65 @@ void BreadthTraversal(TreeNode* root, vector<int>& buf) {
 		buffer.pop_front();
 	}
 }
+
+void BreadthTraversal(TreeNode* root, vector<pair<int, int> >& buf) {
+	if(!root)
+		return;
+
+	list<pair<int, TreeNode*>> buffer;
+
+	buffer.push_back(make_pair(1, root));
+	buffer.push_back(make_pair(-1, (TreeNode*)NULL));
+
+	pair<int, TreeNode*> curr;
+	while(!buffer.empty())
+	{
+		curr = buffer.front();
+		if(curr.first != -1)
+		{
+			if(curr.second->left)
+				buffer.push_back(make_pair(curr.first * 2, curr.second->left));
+			if(curr.second->right)
+				buffer.push_back(make_pair(curr.first * 2 + 1, curr.second->right));
+
+			buf.push_back(make_pair(curr.first, curr.second->val));
+		}
+		else
+		{
+			if(buffer.size() > 1)
+			{
+				buffer.push_back(make_pair(-1, (TreeNode*)NULL));
+			}
+			buf.push_back(make_pair(-1, -1));
+		}
+		buffer.pop_front();
+	}
+}
+
+void DumpTreeByPosition(TreeNode* root) {
+	vector<pair<int, int>> buf;
+	BreadthTraversal(root, buf);
+	DumpTreeByPosition(buf);
+}
+
+void DumpTreeByPosition(vector<pair<int, int> >& buf) {
+	cout << "[";
+	size_t i = 1;
+	for(auto t : buf)
+	{
+		if(t.first != -1)
+		{
+			cout << "<" << t.first << ", " << t.second << ">";
+			if(i < buf.size())
+			{
+				cout << ", ";
+			}
+		}
+		else
+		{
+			cout << endl;
+		}
+		++i;
+	}
+	cout << "]" << endl;
+}

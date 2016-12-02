@@ -28,4 +28,9 @@ void InOrderTraversal(TreeNode * root, vector<int> & buf);
 void PreOrderTraversal(TreeNode * root, vector<int> & buf);
 void PostOrderTraversal(TreeNode * root, vector<int> & buf);
 void BreadthTraversal(TreeNode * root, vector<int> & buf);
+void BreadthTraversal(TreeNode * root, vector<pair<int, int>> & buf);
+
+void DumpTreeByPosition(TreeNode * root);
+void DumpTreeByPosition(vector<pair<int, int>> & buf);
+
 #endif /* TREE_H_ */
