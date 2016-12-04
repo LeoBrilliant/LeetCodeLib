@@ -21,6 +21,8 @@
 #include "EvaluateReversePolishNotation.h"
 #include "ConvertSortedArrayToBinarySearchTree.h"
 #include "ConvertSortedListToBinarySearchTree.h"
+#include "PathSum.h"
+#include "PathSumII.h"
 
 //class SymmetricTree;
 
@@ -55,6 +57,8 @@ void Solution101_150::InitSolutions() {
 	SolutionSet.push_back(new EvaluateReversePolishNotation());
 	SolutionSet.push_back(new ConvertSortedArrayToBinarySearchTree());
 	SolutionSet.push_back(new ConvertSortedListToBinarySearchTree());
+	SolutionSet.push_back(new PathSum());
+	SolutionSet.push_back(new PathSumII());
 }
 
 void Solution101_150::DeleteSolutions() {

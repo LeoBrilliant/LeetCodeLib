@@ -19,14 +19,21 @@ public:
 	{
 		ListNode * slow = head;
 		ListNode * fast = head;
+		ListNode * prevMiddle = NULL;
 		while(fast)
 		{
 			fast = fast->next;
 			if(fast && fast->next)
 			{
 				fast = fast->next;
+				prevMiddle = slow;
 				slow = slow->next;
 			}
+		}
+
+		if(prevMiddle)
+		{
+			prevMiddle->next = NULL;
 		}
 		return slow;
 	}
@@ -39,9 +46,10 @@ public:
 		{
 			ListNode * middle = GetMiddleOfList(head);
 			root = new TreeNode(middle->val);
-			ListNode * tmp = head;
+			//ListNode * tmp = head;
 			if(head != middle)
 			{
+				/*
 				while(tmp)
 				{
 					if(tmp->next != middle)
@@ -53,6 +61,7 @@ public:
 						tmp->next = NULL;
 					}
 				}
+				*/
 				root->left = CreateTree(head);
 			}
 			root->right = CreateTree(middle->next);
