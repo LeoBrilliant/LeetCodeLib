@@ -23,6 +23,7 @@
 #include "ConvertSortedListToBinarySearchTree.h"
 #include "PathSum.h"
 #include "PathSumII.h"
+#include "Triangle.h"
 
 //class SymmetricTree;
 
@@ -59,6 +60,7 @@ void Solution101_150::InitSolutions() {
 	SolutionSet.push_back(new ConvertSortedListToBinarySearchTree());
 	SolutionSet.push_back(new PathSum());
 	SolutionSet.push_back(new PathSumII());
+	SolutionSet.push_back(new Triangle());
 }
 
 void Solution101_150::DeleteSolutions() {
