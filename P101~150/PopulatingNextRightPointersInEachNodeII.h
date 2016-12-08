@@ -28,14 +28,15 @@ public:
 		TreeLinkNode * curr = root;
 		if(curr)
 		{
-			if(curr->left)
+/*			if(curr->left)
 			{
 				son = curr->left;
 			}
 			else if(curr->right)
 			{
 				son = curr->right;
-			}
+			}*/
+			son = curr->left ? curr->left : curr->right;
 		}
 		return son;
 	}
@@ -48,7 +49,7 @@ public:
 			sibling = root->next;
 			while(sibling)
 			{
-				if(GetFirstSon(sibling))
+				if(sibling->left || sibling->right)
 				{
 					break;
 				}
@@ -112,18 +113,14 @@ public:
 						}
 					}
 					if(sibling)
-					{
-						son->next = GetFirstSon(sibling);
-					}
+					son->next = GetFirstSon(sibling);
 				}
 				curr = sibling;
 			}
 
 			curr = firstSon;
 			if(curr)
-			{
-				firstSon = GetFirstSonOfNextLevel(curr);
-			}
+			firstSon = GetFirstSonOfNextLevel(curr);
 		}
 	}
 
