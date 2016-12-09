@@ -27,6 +27,7 @@
 #include "PascalsTriangle.h"
 #include "BestTimeToBuyAndSellStock.h"
 #include "SingleNumber.h"
+#include "BestTimeToBuyAndSellStockII.h"
 
 //class SymmetricTree;
 
@@ -67,6 +68,7 @@ void Solution101_150::InitSolutions() {
 	SolutionSet.push_back(new PascalsTriangle());
 	SolutionSet.push_back(new BestTimeToBuyAndSellStock());
 	SolutionSet.push_back(new SingleNumber());
+	SolutionSet.push_back(new BestTimeToBuyAndSellStockII());
 }
 
 void Solution101_150::DeleteSolutions() {
