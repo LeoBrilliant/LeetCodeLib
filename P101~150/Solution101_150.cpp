@@ -23,6 +23,11 @@
 #include "ConvertSortedListToBinarySearchTree.h"
 #include "PathSum.h"
 #include "PathSumII.h"
+#include "FlattenBinaryTreeToLinkedList.h"
+#include "PascalsTriangle.h"
+#include "BestTimeToBuyAndSellStock.h"
+#include "SingleNumber.h"
+#include "BestTimeToBuyAndSellStockII.h"
 #include "Triangle.h"
 
 //class SymmetricTree;
@@ -60,6 +65,11 @@ void Solution101_150::InitSolutions() {
 	SolutionSet.push_back(new ConvertSortedListToBinarySearchTree());
 	SolutionSet.push_back(new PathSum());
 	SolutionSet.push_back(new PathSumII());
+	SolutionSet.push_back(new FlattenBinaryTreeToLinkedList());
+	SolutionSet.push_back(new PascalsTriangle());
+	SolutionSet.push_back(new BestTimeToBuyAndSellStock());
+	SolutionSet.push_back(new SingleNumber());
+	SolutionSet.push_back(new BestTimeToBuyAndSellStockII());
 	SolutionSet.push_back(new Triangle());
 }
 
