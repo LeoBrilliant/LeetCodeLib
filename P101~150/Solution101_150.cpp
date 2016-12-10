@@ -29,6 +29,7 @@
 #include "SingleNumber.h"
 #include "BestTimeToBuyAndSellStockII.h"
 #include "Triangle.h"
+#include "BestTimeToBuyAndSellStockIII.h"
 
 //class SymmetricTree;
 
@@ -71,6 +72,7 @@ void Solution101_150::InitSolutions() {
 	SolutionSet.push_back(new SingleNumber());
 	SolutionSet.push_back(new BestTimeToBuyAndSellStockII());
 	SolutionSet.push_back(new Triangle());
+	SolutionSet.push_back(new BestTimeToBuyAndSellStockIII());
 }
 
 void Solution101_150::DeleteSolutions() {
