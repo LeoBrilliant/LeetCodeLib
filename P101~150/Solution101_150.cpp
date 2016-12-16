@@ -29,6 +29,8 @@
 #include "SingleNumber.h"
 #include "BestTimeToBuyAndSellStockII.h"
 #include "Triangle.h"
+#include "SingleNumberII.h"
+#include "CopyListWithRandomPointer.h"
 
 //class SymmetricTree;
 
@@ -71,6 +73,8 @@ void Solution101_150::InitSolutions() {
 	SolutionSet.push_back(new SingleNumber());
 	SolutionSet.push_back(new BestTimeToBuyAndSellStockII());
 	SolutionSet.push_back(new Triangle());
+	SolutionSet.push_back(new SingleNumberII());
+	SolutionSet.push_back(new CopyListWithRandomPointer());
 }
 
 void Solution101_150::DeleteSolutions() {
