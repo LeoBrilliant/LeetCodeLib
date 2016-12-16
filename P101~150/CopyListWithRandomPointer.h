@@ -22,7 +22,7 @@ public:
 	CopyListWithRandomPointer();
 	virtual ~CopyListWithRandomPointer();
 
-    RandomListNode *copyRandomList(RandomListNode *head) {
+    RandomListNode *copyRandomList1(RandomListNode *head) {
     	RandomListNode * ret = NULL;
 
     	if(head)
@@ -78,6 +78,42 @@ public:
 
     			curr = next;
     		}
+    	}
+    	return ret;
+    }
+
+    RandomListNode *copyRandomList(RandomListNode *head) {
+    	if(!head) return NULL;
+
+    	RandomListNode * ret = head;
+    	RandomListNode * curr = NULL;
+
+    	while(head)
+    	{
+    		curr = new RandomListNode(head->label);
+    		curr->next = head->next;
+    		head->next = curr;
+    		head = head->next->next;
+    	}
+
+    	head = ret;
+    	while(head)
+    	{
+    		curr = head->next;
+    		if(head->random)
+    			curr->random = head->random->next;
+    		head = head->next->next;
+    	}
+
+    	head = ret;
+    	ret = head->next;
+    	while(head)
+    	{
+    		curr = head->next;
+    		head->next = head->next->next;
+    		head = head->next;
+    		if(head)
+    			curr->next = head->next;
     	}
     	return ret;
     }
