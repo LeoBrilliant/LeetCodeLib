@@ -84,6 +84,11 @@ int CmpVector(vector<T> & vt1, vector<T> & vt2)
 		}
 	}
 
+	if(ret == 0 && m != n)
+	{
+		ret = (m > n ? 1 : -1);
+	}
+
 	return ret;
 }
 

@@ -23,6 +23,7 @@
 #include <cassert>
 #include <unordered_set>
 #include <deque>
+#include <unordered_map>
 
 #include "DataStruct.h"
 
