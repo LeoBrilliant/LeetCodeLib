@@ -5,7 +5,7 @@
  *      Author: user
  */
 
-#include "Solution101_150.h"
+#include "Solution101_150.h"/*
 #include "SymmetricTree.h"
 #include "BinaryTreeLevelOrderTraversal.h"
 #include "BucketSort.h"
@@ -28,8 +28,12 @@
 #include "BestTimeToBuyAndSellStock.h"
 #include "SingleNumber.h"
 #include "BestTimeToBuyAndSellStockII.h"
-#include "Triangle.h"
+#include "Triangle.h"*/
 #include "BestTimeToBuyAndSellStockIII.h"
+#include "ValidPalindrome.h"
+#include "LinkedListCycle.h"
+#include "WordBreak.h"
+#include "SumRootToLeafNumbers.h"
 
 //class SymmetricTree;
 
@@ -48,7 +52,7 @@ void Solution101_150::RunLastTestSuite() {
 	last->TestSuite();
 }
 
-void Solution101_150::InitSolutions() {
+void Solution101_150::InitSolutions() {/*
 	SolutionSet.push_back(new SymmetricTree());
 	SolutionSet.push_back(new BinaryTreeLevelOrderTraversal());
 	SolutionSet.push_back(new BucketSort());
@@ -71,8 +75,12 @@ void Solution101_150::InitSolutions() {
 	SolutionSet.push_back(new BestTimeToBuyAndSellStock());
 	SolutionSet.push_back(new SingleNumber());
 	SolutionSet.push_back(new BestTimeToBuyAndSellStockII());
-	SolutionSet.push_back(new Triangle());
+	SolutionSet.push_back(new Triangle());*/
 	SolutionSet.push_back(new BestTimeToBuyAndSellStockIII());
+	SolutionSet.push_back(new ValidPalindrome());
+	SolutionSet.push_back(new LinkedListCycle());
+	SolutionSet.push_back(new WordBreak());
+//	SolutionSet.push_back(new SumRootToLeafNumbers());
 }
 
 void Solution101_150::DeleteSolutions() {
