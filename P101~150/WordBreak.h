@@ -98,7 +98,7 @@ public:
     }
 
     // 如果内存循环使用了break，就演变成贪心算法
-    bool wordBreak(string s, unordered_set<string> & wordDict)
+    bool wordBreakI(string s, unordered_set<string> & wordDict)
     {
     	bool ret = false;
     	int n = s.length();
@@ -126,7 +126,126 @@ public:
     	return ret;
     }
 
+    // 这是用递归就TLE的节奏啊
+	void GetAllBreak(string s, unordered_set<string> & dict,
+			vector<string> & holder, vector<string> & ret, int currlen, int len)
+	{
+		if(currlen == len)
+		{
+			string tmp;
+			int n = holder.size();
+			for(int i = 0; i < n; ++i)
+			{
+				tmp += holder[i];
+				if(i != n - 1)
+					tmp += " ";
+			}
+			ret.push_back(tmp);
+			return;
+		}
+		int n = s.length();
+		// int l = 0;
+		for(int i = 1; i <= n; ++i)
+		{
+			string word = s.substr(0, i);
+			if(dict.find(word) != dict.end())
+			{
+				holder.push_back(word);
+				GetAllBreak(s.substr(i, n - i), dict, holder, ret, currlen + i, len);
+				holder.pop_back();
+			}
+		}
+	}
+
+    vector<string> wordBreakII(string s, unordered_set<string>& wordDict) {
+    	vector<string> ret;
+    	int n = s.size();
+    	if(n)
+    	{
+    		vector<string> holder;
+    		GetAllBreak(s, wordDict, holder, ret, 0, n);
+    	}
+    	return ret;
+    }
+
+    void GetBreaks(string &s, vector<string> & ret, vector<unordered_set<int>> & flags, vector<string> & buf, int index)
+    {
+    	if(index <= 0)
+    	{
+			string tmp;
+			int n = buf.size();
+			for(int i = n - 1; i >= 0; --i)
+			{
+				tmp += buf[i];
+				if(i != 0)
+					tmp += " ";
+			}
+			ret.push_back(tmp);
+			return;
+    	}
+
+    	while(!flags[index].size())
+    	{
+    		index--;
+    	}
+
+    	for(auto it = flags[index].begin(); it != flags[index].end(); ++it)
+    	{
+    		int begin = *it;
+    		string word = s.substr(begin, index - begin);
+    		//cout << "word = " << word << endl;
+    		buf.push_back(word);
+    		//if(begin != 0)
+    			GetBreaks(s, ret, flags, buf, begin);
+    		//else
+    		//	GetBreaks(s, ret, flags, buf, -1);
+    		buf.pop_back();
+    	}
+    }
+
+    vector<string> wordBreak(string s, unordered_set<string>& wordDict) {
+    	vector<string> ret;
+    	int n = s.size();
+    	if(!n)
+    	{
+    		return ret;
+    	}
+
+		vector<unordered_set<int>> flags(n + 1);
+		for(int i = 1; i <= n; ++ i)
+		{
+			for(int j = i; j > 0; j--)
+			{
+				if(i == j && wordDict.find(s.substr(0, i)) != wordDict.end())
+				{
+					if(flags[i].find(0) == flags[i].end())
+					{
+						flags[i].insert(0);
+						//cout << s.substr(0, i) << endl;
+					}
+				}
+				else if(flags[j].size() && wordDict.find(s.substr(j , i - j)) != wordDict.end())
+				{
+					if(flags[i].find(j) == flags[i].end())
+					{
+						flags[i].insert(j);
+						//cout << s.substr(j, i - j) << endl;
+					}
+				}
+			}
+		}
+
+		if(flags[n].size())
+		{
+			vector<string> buf;
+			this->GetBreaks(s, ret, flags, buf, n);
+		}
+    	return ret;
+    }
+
     void TestSuite1();
+
+    void TestSuite2();
 
     void TestSuite();
 };

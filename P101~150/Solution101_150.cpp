@@ -81,10 +81,10 @@ void Solution101_150::InitSolutions() {/*
 	SolutionSet.push_back(new BestTimeToBuyAndSellStockIII());
 	SolutionSet.push_back(new ValidPalindrome());
 	SolutionSet.push_back(new LinkedListCycle());
-	SolutionSet.push_back(new WordBreak());
 	SolutionSet.push_back(new SingleNumberII());
 	SolutionSet.push_back(new CopyListWithRandomPointer());
-//	SolutionSet.push_back(new SumRootToLeafNumbers());
+	SolutionSet.push_back(new SumRootToLeafNumbers());
+	SolutionSet.push_back(new WordBreak());
 }
 
 void Solution101_150::DeleteSolutions() {
