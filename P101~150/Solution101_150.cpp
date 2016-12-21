@@ -36,6 +36,7 @@
 #include "SumRootToLeafNumbers.h"
 #include "SingleNumberII.h"
 #include "CopyListWithRandomPointer.h"
+#include "MajorityElement.h"
 
 //class SymmetricTree;
 
@@ -85,6 +86,7 @@ void Solution101_150::InitSolutions() {/*
 	SolutionSet.push_back(new CopyListWithRandomPointer());
 	SolutionSet.push_back(new SumRootToLeafNumbers());
 	SolutionSet.push_back(new WordBreak());
+	SolutionSet.push_back(new MajorityElement());
 }
 
 void Solution101_150::DeleteSolutions() {

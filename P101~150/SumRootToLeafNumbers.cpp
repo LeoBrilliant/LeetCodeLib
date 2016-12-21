@@ -15,9 +15,6 @@ SumRootToLeafNumbers::~SumRootToLeafNumbers() {
 	// TODO Auto-generated destructor stub
 }
 
-#define SHOW(x) \
-	cout << #x << "\t=\t" << x << endl
-
 void SumRootToLeafNumbers::TestSuite() {
 	TreeNode * root;
 	map<int, int> nodes;

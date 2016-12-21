@@ -29,4 +29,8 @@
 
 using namespace std;
 
+
+#define SHOW(x) \
+	cout << #x << "\t=\t" << x << endl
+
 #endif /* COMMON_H_ */
